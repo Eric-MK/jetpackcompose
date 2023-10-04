@@ -25,6 +25,8 @@ import androidx.compose.ui.unit.dp
 import com.example.myapplication_jetpackcompose.ui.theme.MyApplication_jetpackcomposeTheme
 import androidx.compose.foundation.border
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+
 // ...
 
 
@@ -65,10 +67,13 @@ fun MessageCard(msg: Message) {
 
             Spacer(modifier = Modifier.height(4.dp))
 
-            Text(
-                text = msg.body,
-                style = MaterialTheme.typography.bodyMedium
-            )
+            Surface(shape = MaterialTheme.shapes.medium, shadowElevation = 1.dp) {
+                Text(
+                    text = msg.body,
+                    modifier = Modifier.padding(all = 4.dp),
+                    style = MaterialTheme.typography.bodyMedium
+                )
+            }
         }
     }
 }
