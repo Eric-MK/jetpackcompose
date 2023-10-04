@@ -5,6 +5,7 @@ import androidx.compose.material3.Text
 // ... Other imports for Jetpack Compose
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.foundation.layout.Column
 
 // ...
 
@@ -21,9 +22,12 @@ data class Message(val author: String, val body: String)
 
 @Composable
 fun MessageCard(msg: Message) {
-    Text(text = msg.author)
-    Text(text = msg.body)
+    Column {
+        Text(text = msg.author)
+        Text(text = msg.body)
+    }
 }
+
 
 @Preview
 @Composable
