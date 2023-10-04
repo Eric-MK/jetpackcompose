@@ -26,6 +26,7 @@ import com.example.myapplication_jetpackcompose.ui.theme.MyApplication_jetpackco
 import androidx.compose.foundation.border
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import android.content.res.Configuration
 
 // ...
 
@@ -78,13 +79,17 @@ fun MessageCard(msg: Message) {
     }
 }
 
-@Preview
+@Preview(
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    showBackground = true,
+    name = "Dark Mode"
+)
 @Composable
 fun PreviewMessageCard() {
     MyApplication_jetpackcomposeTheme {
         Surface {
             MessageCard(
-                msg = Message("Lexi", "Take a look at Jetpack Compose, it's great!")
+                msg = Message("Lexi", "Hey, take a look at Jetpack Compose, it's great!")
             )
         }
     }
