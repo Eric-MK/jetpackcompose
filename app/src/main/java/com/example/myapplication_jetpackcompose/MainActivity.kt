@@ -6,25 +6,30 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 
+// ...
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Set the content of this activity to the MessageCard Composable
         setContent {
-            MessageCard("Android")
+            MessageCard(Message("Android", "Jetpack Compose"))
         }
     }
 }
 
+data class Message(val author: String, val body: String)
+
 @Composable
-fun MessageCard(name: String) {
-    // Define a Composable function called MessageCard that takes a 'name' parameter
-    Text(text = "Hello $name!") // Display a Text Composable with a greeting message
+fun MessageCard(msg: Message) {
+    Text(text = msg.author)
+    Text(text = msg.body)
 }
 
 @Preview
 @Composable
 fun PreviewMessageCard() {
-    // Define a Composable function called PreviewMessageCard
-    MessageCard("Android") // Display the MessageCard Composable with a specific 'name'
+    MessageCard(
+        msg = Message("Lexi", "Hey, take a look at Jetpack Compose, it's great!")
+    )
 }
+
