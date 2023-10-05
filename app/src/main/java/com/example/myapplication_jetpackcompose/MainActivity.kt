@@ -25,8 +25,10 @@ import androidx.compose.ui.unit.dp
 import com.example.myapplication_jetpackcompose.ui.theme.MyApplication_jetpackcomposeTheme
 import androidx.compose.foundation.border
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import android.content.res.Configuration
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import com.example.myapplication_jetpackcompose.SampleData
 
 // ...
 
@@ -76,6 +78,23 @@ fun MessageCard(msg: Message) {
                 )
             }
         }
+    }
+}
+
+@Composable
+fun Conversation(messages: List<Message>) {
+    LazyColumn {
+        items(messages) { message ->
+            MessageCard(message)
+        }
+    }
+}
+
+@Preview
+@Composable
+fun PreviewConversation() {
+    MyApplication_jetpackcomposeTheme {
+        Conversation(SampleData.conversationSample)
     }
 }
 
