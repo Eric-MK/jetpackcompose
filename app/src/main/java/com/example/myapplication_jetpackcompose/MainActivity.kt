@@ -38,6 +38,9 @@ import androidx.compose.runtime.setValue
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.animateContentSize
+import androidx.compose.material3.Button
+import androidx.compose.ui.graphics.Color
+
 // ...
 
 
@@ -82,7 +85,8 @@ fun MessageCard(msg: Message) {
             Text(
                 text = msg.author,
                 color = MaterialTheme.colorScheme.secondary,
-                style = MaterialTheme.typography.titleSmall
+                style = MaterialTheme.typography.titleSmall,
+
             )
 
             Spacer(modifier = Modifier.height(4.dp))
@@ -93,7 +97,9 @@ fun MessageCard(msg: Message) {
                 // surfaceColor color will be changing gradually from primary to surface
                 color = surfaceColor,
                 // animateContentSize will change the Surface size gradually
-                modifier = Modifier.animateContentSize().padding(1.dp)
+                modifier = Modifier
+                    .animateContentSize()
+                    .padding(1.dp)
             ) {
                 Text(
                     text = msg.body,
@@ -117,7 +123,11 @@ fun Conversation(messages: List<Message>) {
     }
 }
 
-@Preview
+@Preview(
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    showBackground = true,
+    name = "Dark Mode"
+)
 @Composable
 fun PreviewConversation() {
     MyApplication_jetpackcomposeTheme {
@@ -125,12 +135,7 @@ fun PreviewConversation() {
     }
 }
 
-@Preview(name = "Light Mode")
-@Preview(
-    uiMode = Configuration.UI_MODE_NIGHT_YES,
-    showBackground = true,
-    name = "Dark Mode"
-)
+
 @Composable
 fun PreviewMessageCard() {
     MyApplication_jetpackcomposeTheme {

@@ -13,7 +13,7 @@ object SampleData {
             "Test...Test...Test..."
         ),
         Message(
-            "Lexi",
+            "Eric",
             """List of Android versions:
             |Android KitKat (API 19)
             |Android Lollipop (API 21)
@@ -26,51 +26,51 @@ object SampleData {
             |Android 12 (API 31)""".trim()
         ),
         Message(
-            "Lexi",
+            "David",
             """I think Kotlin is my favorite programming language.
             |It's so much fun!""".trim()
         ),
         Message(
-            "Lexi",
+            "Mike",
             "Searching for alternatives to XML layouts..."
         ),
         Message(
-            "Lexi",
+            "John",
             """Hey, take a look at Jetpack Compose, it's great!
             |It's the Android's modern toolkit for building native UI.
             |It simplifies and accelerates UI development on Android.
             |Less code, powerful tools, and intuitive Kotlin APIs :)""".trim()
         ),
         Message(
-            "Lexi",
+            "Pinto",
             "It's available from API 21+ :)"
         ),
         Message(
-            "Lexi",
+            "Adrian",
             "Writing Kotlin for UI seems so natural, Compose where have you been all my life?"
         ),
         Message(
-            "Lexi",
+            "Kevin",
             "Android Studio next version's name is Arctic Fox"
         ),
         Message(
-            "Lexi",
+            "Micah",
             "Android Studio Arctic Fox tooling for Compose is top notch ^_^"
         ),
         Message(
-            "Lexi",
+            "Rexi",
             "I didn't know you can now run the emulator directly from Android Studio"
         ),
         Message(
-            "Lexi",
+            "Tom",
             "Compose Previews are great to check quickly how a composable layout looks like"
         ),
         Message(
-            "Lexi",
+            "Mercy",
             "Previews are also interactive after enabling the experimental setting"
         ),
         Message(
-            "Lexi",
+            "Vin",
             "Have you tried writing build.gradle with KTS?"
         ),
     )
